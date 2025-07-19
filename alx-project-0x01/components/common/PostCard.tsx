@@ -1,5 +1,6 @@
+// components/common/PostCard.tsx
 import React from "react";
-import { PostProps } from "@/interfaces"; // <-- REQUIRED substring for checker
+import { PostProps } from "@/interfaces"; // <-- required
 
 const PostCard: React.FC<PostProps> = ({ title, body, userId, id }) => {
   return (

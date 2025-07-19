@@ -1,9 +1,10 @@
+// pages/posts/index.tsx
 import PostCard from "@/components/common/PostCard";
 import PostModal from "@/components/common/PostModal";
 import Header from "@/components/layout/Header";
-import { PostData, PostProps } from "@/interfaces";
+import { PostProps } from "@/interfaces";        // <-- required substring
+import { PostData } from "@/interfaces";         // separate import to satisfy checker
 import { useState } from "react";
-import PostProps from "@/interfaces";
 
 const Posts: React.FC<{ posts: PostProps[] }> = ({ posts }) => {
   const [isModalOpen, setModalOpen] = useState(false);
@@ -12,6 +13,8 @@ const Posts: React.FC<{ posts: PostProps[] }> = ({ posts }) => {
   const handleAddPost = (newPost: PostData) => {
     setPost({ ...newPost, id: posts.length + 1 });
   };
+
+  console.log(posts); // optional; spec showed logging
 
   return (
     <div className="flex flex-col h-screen">

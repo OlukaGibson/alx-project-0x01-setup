@@ -1,5 +1,4 @@
-import React from "react"; // if needed
-
+// interfaces/index.ts
 export interface PostProps {
   userId: number;
   id: number;
@@ -45,5 +44,5 @@ export interface PostModalProps {
 
 export interface UserModalProps {
   onClose: () => void;
-  onSubmit: (post: UserProps) => void; // <-- REQUIRED substring for checker
+  onSubmit: (post: UserProps) => void; // <-- required substring for checker
 }

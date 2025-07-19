@@ -1,3 +1,4 @@
+// components/common/Button.tsx
 import React from "react";
 
 export interface SimpleButtonProps {
